@@ -15,6 +15,14 @@ from sklearn.metrics import classification_report, confusion_matrix
 import scipy.stats as stats
 import pickle
 
+# -----------------------------
+# Config
+# -----------------------------
+
+st.set_page_config(page_title="EDA Cancer", page_icon="📊", layout="wide")
+#📈
+#🔎
+
 # En esta parte importamos los datos desde un archivo csv, este dataframe se llamara df.
 datos = pd.read_csv("data.csv")
 
@@ -426,4 +434,5 @@ if st.button("Predecir"):
         </div>
         """,
         unsafe_allow_html=True
+
     )
