@@ -329,7 +329,7 @@ variables_por_defecto = ["radius_mean", "perimeter_mean", "area_mean", "concavit
 
 # Mostrar multiselect con preselección
 variables_predictoras = st.multiselect(
-    "Seleccione las variables predictoras del modelo",
+    "",
     df.columns.drop("Diagnóstico"),
     default=[var for var in variables_por_defecto if var in df.columns]
 )
@@ -444,6 +444,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
