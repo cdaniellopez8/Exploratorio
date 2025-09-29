@@ -311,6 +311,11 @@ El siguiente mapa de calor representa las correlaciones entre las variables del 
 ---
 """)
 
+# =====================
+# Modelo interno
+# =====================
+
+
 st.title("🧮 Prediccion del tipo de tumor - Entrenado al incluir variables")
 
 st.markdown("""
@@ -328,12 +333,6 @@ variables_predictoras = st.multiselect(
     df.columns.drop("Diagnóstico"),
     default=[var for var in variables_por_defecto if var in df.columns]
 )
-
-
-# =====================
-# Modelo interno
-# =====================
-
 
 # Selección de variables predictoras
 # variables_predictoras = st.multiselect("Selecciona las variables para el modelo", df.columns.drop("Diagnóstico"))
@@ -445,4 +444,5 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
