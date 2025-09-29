@@ -363,7 +363,7 @@ if len(variables_predictoras) > 0:
 
     input_data = {}
     for var in variables_predictoras:
-        input_data[var] = st.number_input(f"{var}", float(0), float(10000), float(df[var].mean()))
+        input_data[var] = st.number_input(f"{var}", min_value=float(0), max_value=float(10000), value=float(df[var].mean()))
 
     if st.button("Predecir Diagnóstico"):
         input_df = pd.DataFrame([input_data])
@@ -444,6 +444,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
