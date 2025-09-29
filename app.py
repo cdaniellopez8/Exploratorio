@@ -23,6 +23,10 @@ st.set_page_config(page_title="EDA Cancer", page_icon="📊", layout="wide")
 #📈
 #🔎
 
+# -----------------------------
+# Datos
+# -----------------------------
+
 # En esta parte importamos los datos desde un archivo csv, este dataframe se llamara df.
 datos = pd.read_csv("data.csv")
 
@@ -326,6 +330,11 @@ variables_predictoras = st.multiselect(
 )
 
 
+# =====================
+# Modelo interno
+# =====================
+
+
 # Selección de variables predictoras
 # variables_predictoras = st.multiselect("Selecciona las variables para el modelo", df.columns.drop("Diagnóstico"))
 
@@ -436,3 +445,4 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
