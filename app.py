@@ -375,7 +375,7 @@ if len(variables_predictoras) > 0:
             st.markdown(f"<span style='color:red;'>🔬 Probabilidad de ser maligno: {probabilidad:.2%}</span>", unsafe_allow_html=True)
         else:
             st.markdown(f"<span style='color:green; font-weight:bold;'>✅ Diagnóstico predicho: Benigno 🟢</span>", unsafe_allow_html=True)
-            st.markdown(f"Probabilidad de ser maligno: <span style='color:red;'>🔬  {str(round(probabilidad * 100, 2)) + "%"}</span>", unsafe_allow_html=True)
+            st.markdown(f"Probabilidad de ser maligno: <span style='color:red;'>🔬  {str(round(probabilidad * 100, 3)) + "%"}</span>", unsafe_allow_html=True)
 else:
     st.info("Selecciona al menos una variable para entrenar el modelo.")
 
@@ -442,6 +442,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
