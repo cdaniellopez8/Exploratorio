@@ -370,13 +370,11 @@ if len(variables_predictoras) > 0:
         prediccion = modelo.predict(input_df)[0]
         probabilidad = modelo.predict_proba(input_df)[0][1]
 
-        diagnostico = "Maligno" if prediccion == 1 else "Benigno"
-
-        if diagnostico == "Maligno":
-            st.markdown(f"<span style='color:red; font-weight:bold;'>✅ Diagnóstico predicho: {diagnostico} 🔴</span>", unsafe_allow_html=True)
+        if prediccion == 1:
+            st.markdown(f"<span style='color:red; font-weight:bold;'>✅ Diagnóstico predicho: Maligno 🔴</span>", unsafe_allow_html=True)
             st.markdown(f"<span style='color:red;'>🔬 Probabilidad de ser maligno: {probabilidad:.2%}</span>", unsafe_allow_html=True)
         else:
-            st.markdown(f"<span style='color:green; font-weight:bold;'>✅ Diagnóstico predicho: {diagnostico} 🟢</span>", unsafe_allow_html=True)
+            st.markdown(f"<span style='color:green; font-weight:bold;'>✅ Diagnóstico predicho: Benigno 🟢</span>", unsafe_allow_html=True)
             st.markdown(f"Probabilidad de ser maligno: <span style='color:red;'>🔬  {probabilidad:.2%}</span>", unsafe_allow_html=True)
 else:
     st.info("Selecciona al menos una variable para entrenar el modelo.")
@@ -444,6 +442,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
