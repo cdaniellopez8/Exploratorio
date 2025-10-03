@@ -410,8 +410,8 @@ st.title("🩺 Predicción de Cáncer de Mama cargando un modelo Pickle")
 # Carga del pickle
 # =====================
 
-with open("modelo_cancer.pkl", "rb") as archivo:
-    data = pickle.load(archivo)
+with open("modelo_cancer.pkl", "rb") as archivos:
+    data = pickle.load(archivos)
 
 modelo = data["modelo"]
 features = data["features"]
@@ -461,6 +461,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
