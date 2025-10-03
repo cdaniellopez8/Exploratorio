@@ -1,12 +1,12 @@
 #from io import BytesIO
 #import requests
+#from ucimlrepo import fetch_ucirepo 
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import plotly.figure_factory as ff
 import numpy as np
-from ucimlrepo import fetch_ucirepo 
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
@@ -442,6 +442,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
