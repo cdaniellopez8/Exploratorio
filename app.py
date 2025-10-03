@@ -125,6 +125,14 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
+fig, ax = plt.subplots(figsize=(8, 5))
+ax.hist(df[variable_seleccionada], bins=30, color="steelblue", edgecolor="black")
+ax.set_title("Histograma 1", fontsize=14)
+ax.set_xlabel(variable_seleccionada, fontsize=12)
+ax.set_ylabel("Frecuencia", fontsize=12)
+st.pyplot(fig)
+
+
 #figura = px.histogram(
 #        df,
 #        x=variable_seleccionada,
@@ -444,6 +452,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
