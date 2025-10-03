@@ -125,7 +125,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-fig, ax = plt.subplots(figsize=(1, 1))
+fig, ax = plt.subplots()
 ax.hist(df[variable_seleccionada], bins=30, color="steelblue", edgecolor="black")
 ax.set_title("Histograma 1", fontsize=14)
 ax.set_xlabel(variable_seleccionada, fontsize=12)
@@ -452,6 +452,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
