@@ -19,7 +19,9 @@ import pickle
 # Config
 # -----------------------------
 
-st.set_page_config(page_title="EDA Cancer", page_icon="📊", layout="wide")
+st.set_page_config(page_title="EDA Cancer",
+                   page_icon="📊",
+                   layout="wide")
 #📈
 #🔎
 
@@ -442,6 +444,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
