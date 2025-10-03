@@ -71,6 +71,11 @@ st.markdown("""
 ---
 """)
 
+# -----------------------------
+# Datos faltantes en el dataset
+# -----------------------------
+
+
 #st.subheader("Conteo de datos faltantes en el dataset")
 
 #valores_nulos = df.isnull().sum()
@@ -125,12 +130,16 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-fig, ax = plt.subplots()
-ax.hist(df[variable_seleccionada], bins=30, color="steelblue", edgecolor="black")
-ax.set_title("Histograma 1", fontsize=14)
-ax.set_xlabel(variable_seleccionada, fontsize=12)
-ax.set_ylabel("Frecuencia", fontsize=12)
-st.pyplot(fig)
+# -----------------------------
+# Figuras y ejemplos
+# -----------------------------
+
+#fig, ax = plt.subplots()
+#ax.hist(df[variable_seleccionada], bins=30, color="steelblue", edgecolor="black")
+#ax.set_title("Histograma 1", fontsize=14)
+#ax.set_xlabel(variable_seleccionada, fontsize=12)
+#ax.set_ylabel("Frecuencia", fontsize=12)
+#st.pyplot(fig)
 
 
 #figura = px.histogram(
@@ -452,6 +461,7 @@ if st.button("Predecir"):
         unsafe_allow_html=True
 
     )
+
 
 
 
